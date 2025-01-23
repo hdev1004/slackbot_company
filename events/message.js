@@ -1,9 +1,11 @@
 module.exports = (app) => {
-    app.message(/hello/i, async ({ message, say }) => {
+    app.message('안녕', async ({ message, say }) => {
+      console.log("hello detected");
       await say(`안녕하세요, <@${message.user}>님!`);
     });
   
-    app.message(/bye/i, async ({ message, say }) => {
+    app.message('저리가', async ({ message, say }) => {
+      console.log("bye detected");
       await say('안녕히 가세요!');
     });
   };
